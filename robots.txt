@@ -1,0 +1,37 @@
+# robots.txt per manueladurizzi.it
+# Psicologa Clinica Bergamo - Dott.ssa Manuela Durizzi
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://manueladurizzi.it/sitemap.xml
+
+# Crawl-delay per essere gentili con i bot
+Crawl-delay: 1
+
+# Blocca accesso a file non necessari
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Permetti tutti i principali bot dei motori di ricerca
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Host preferito
+Host: https://manueladurizzi.it
