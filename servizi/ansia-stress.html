@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestione Ansia e Stress | Psicologa Chiari - Dott.ssa Manuela Durizzi</title>
+    <meta name="description"
+        content="Psicologa specializzata in gestione ansia, attacchi di panico e stress a Chiari. Tecniche evidence-based per ritrovare serenità. Colloqui online e in presenza.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://manueladurizzi.it/servizi/ansia-stress.html">
+
+    <meta property="og:title" content="Gestione Ansia e Stress | Psicologa Chiari">
+    <meta property="og:description"
+        content="Percorsi specializzati per ansia, attacchi di panico e stress. Psicologa a Chiari e online.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <meta name="theme-color" content="#9CAF88">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FAF8F5;
+            --sage: #9CAF88;
+            --sage-light: #B8C5AA;
+            --sage-dark: #7A8B6F;
+            --terracotta: #C4977A;
+            --forest: #3D4A3A;
+            --charcoal: #2C2C2C;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --white: #FFFFFF;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--cream);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--forest);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .page-hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, var(--cream), var(--sage-light));
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 16px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-section.white {
+            background: var(--white);
+        }
+
+        .content-text h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 4vw, 42px);
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 24px;
+        }
+
+        .content-text h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--forest);
+            margin: 32px 0 16px;
+        }
+
+        .content-text p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .content-text ul {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .content-text ul li {
+            padding: 12px 0 12px 32px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .content-text ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .highlight-box {
+            background: var(--sage-light);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: var(--forest);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: var(--sage-dark);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">Manuela Durizzi</a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../chi-sono.html">Chi Sono</a></li>
+                    <li><a href="../servizi.html">Servizi</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Gestione Ansia e Stress</h1>
+            <p>Percorsi personalizzati per ritrovare serenità e benessere emotivo</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="content-section white">
+            <div class="container">
+                <div class="content-text">
+                    <h2>Che cos'è l'ansia?</h2>
+                    <p>
+                        L'<strong>ansia</strong> è una risposta naturale del nostro corpo di fronte a situazioni
+                        percepite come minacciose o stressanti. Diventa problematica quando è eccessiva, persistente e
+                        interferisce con la vita quotidiana.
+                    </p>
+                    <p>
+                        Molte persone a <strong>Chiari e provincia di Brescia</strong> si rivolgono al mio studio
+                        psicologico per affrontare problematiche legate ad ansia generalizzata, attacchi di panico,
+                        stress lavorativo o preoccupazioni costanti.
+                    </p>
+
+                    <h3>Sintomi comuni dell'ansia</h3>
+                    <ul>
+                        <li>Preoccupazioni eccessive e difficili da controllare</li>
+                        <li>Tensione muscolare e irrequietezza</li>
+                        <li>Difficoltà di concentrazione</li>
+                        <li>Disturbi del sonno (insonnia)</li>
+                        <li>Palpitazioni e tachicardia</li>
+                        <li>Sudorazione eccessiva, tremori</li>
+                        <li>Sensazione di soffocamento</li>
+                        <li>Paura di perdere il controllo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-text">
+                    <h2>Come posso aiutarti</h2>
+                    <p>
+                        Nel mio studio a <strong>Chiari</strong>, offro percorsi psicologici personalizzati basati su
+                        <strong>tecniche evidence-based</strong> per la gestione dell'ansia e dello stress. Il mio
+                        approccio integra diverse metodologie per aiutarti a:
+                    </p>
+
+                    <h3>Obiettivi del percorso</h3>
+                    <ul>
+                        <li>Riconoscere e comprendere i meccanismi dell'ansia</li>
+                        <li>Apprendere tecniche di rilassamento e respirazione</li>
+                        <li>Sviluppare strategie di gestione dello stress</li>
+                        <li>Modificare pensieri disfunzionali che alimentano l'ansia</li>
+                        <li>Affrontare gradualmente le situazioni temute</li>
+                        <li>Migliorare la qualità del sonno</li>
+                        <li>Ritrovare equilibrio e serenità nella vita quotidiana</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h3>Attacchi di Panico</h3>
+                        <p>
+                            Gli <strong>attacchi di panico</strong> sono episodi improvvisi di intensa paura
+                            accompagnati da sintomi fisici come palpitazioni, sudorazione, tremori e sensazione di
+                            soffocamento. Possono essere spaventosi, ma sono trattabili con successo.
+                        </p>
+                        <p>
+                            Con un percorso psicologico mirato, è possibile ridurre la frequenza e l'intensità degli
+                            attacchi, comprenderne le cause e imparare a gestirli efficacemente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section white">
+            <div class="container">
+                <div class="content-text">
+                    <h2>Modalità di intervento</h2>
+                    <p>
+                        Offro <strong>consulenze psicologiche in presenza</strong> nel mio studio a Chiari (BS),
+                        facilmente raggiungibile da tutta la provincia di Brescia, e <strong>consulenze online</strong>
+                        per chi preferisce la comodità del colloquio da casa.
+                    </p>
+
+                    <h3>Tecniche utilizzate</h3>
+                    <ul>
+                        <li><strong>Tecniche di rilassamento</strong> - Respirazione diaframmatica, rilassamento
+                            muscolare progressivo</li>
+                        <li><strong>Mindfulness</strong> - Consapevolezza del momento presente per ridurre ruminazione
+                        </li>
+                        <li><strong>Ristrutturazione cognitiva</strong> - Modificare pensieri ansiosi disfunzionali</li>
+                        <li><strong>Esposizione graduale</strong> - Affrontare progressivamente le situazioni temute
+                        </li>
+                        <li><strong>Gestione dello stress</strong> - Strategie pratiche per la vita quotidiana</li>
+                    </ul>
+
+                    <h3>Quanto dura il percorso?</h3>
+                    <p>
+                        La durata del percorso varia in base alle esigenze individuali. Generalmente, i primi
+                        miglioramenti si osservano dopo 6-10 sedute, ma ogni percorso è personalizzato e concordato
+                        insieme.
+                    </p>
+
+                    <a href="../contatti.html" class="btn">Prenota una Consulenza</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>© 2026 Dott.ssa Manuela Durizzi</strong> • Psicologa Clinica Chiari</p>
+            <p>Chiari, Lombardia • Ordine Psicologi Lombardia n. 30473</p>
+        </div>
+    </footer>
+</body>
+
+</html>

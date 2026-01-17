@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti | Psicologa Chiari - Dott.ssa Manuela Durizzi</title>
+    <meta name="description"
+        content="Contatta la Dott.ssa Manuela Durizzi, psicologa a Chiari. Email, telefono, studio in Via Maffoni 19. Prenota consulenza psicologica online o in presenza.">
+    <link rel="canonical" href="https://manueladurizzi.it/contatti.html">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FAF8F5;
+            --sage: #9CAF88;
+            --sage-light: #B8C5AA;
+            --sage-dark: #7A8B6F;
+            --forest: #3D4A3A;
+            --charcoal: #2C2C2C;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --white: #FFFFFF;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--cream);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--forest);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .page-hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, var(--cream), var(--sage-light));
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 16px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: var(--sage-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .contact-card h3 {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 12px;
+        }
+
+        .contact-card a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: var(--sage-dark);
+        }
+
+        .location-section {
+            background: var(--white);
+            padding: 80px 0;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .location-text h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 4vw, 42px);
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 24px;
+        }
+
+        .location-text p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .location-text strong {
+            color: var(--forest);
+        }
+
+        .map-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 4vw, 42px);
+            color: var(--forest);
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: var(--forest);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+
+        .btn:hover {
+            background: var(--sage-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--forest);
+            border: 2px solid var(--forest);
+        }
+
+        .btn-secondary:hover {
+            background: var(--forest);
+            color: var(--white);
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Manuela Durizzi</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chi-sono.html">Chi Sono</a></li>
+                    <li><a href="servizi.html">Servizi</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contatti</h1>
+            <p>Sono qui per ascoltarti. Contattami per prenotare una consulenza psicologica</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <a href="mailto:manueladurizzi@gmail.com">manueladurizzi@gmail.com</a>
+                        <p style="margin-top: 12px; font-size: 14px; color: var(--text-light);">Rispondo entro 24 ore
+                        </p>
+                    </article>
+
+                    <article class="contact-card">
+                        <div class="contact-icon">📱</div>
+                        <h3>Telefono / WhatsApp</h3>
+                        <a href="tel:+393520019266">+39 352 001 9266</a>
+                        <p style="margin-top: 12px; font-size: 14px; color: var(--text-light);">Lun-Ven 9:00-19:00</p>
+                    </article>
+
+                    <article class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/manuela-durizzi-485a28371/" target="_blank"
+                            rel="noopener">Profilo LinkedIn</a>
+                        <p style="margin-top: 12px; font-size: 14px; color: var(--text-light);">Rete professionale</p>
+                    </article>
+
+                    <article class="contact-card">
+                        <div class="contact-icon">🩺</div>
+                        <h3>MioDottore</h3>
+                        <a href="https://www.miodottore.it/manuela-durizzi/psicologo-clinico/chiari" target="_blank"
+                            rel="noopener">Prenota su MioDottore</a>
+                        <p style="margin-top: 12px; font-size: 14px; color: var(--text-light);">Prenotazione online</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-section">
+            <div class="container">
+                <div class="location-grid">
+                    <div class="location-text">
+                        <h2>Dove Ricevo</h2>
+                        <h3
+                            style="font-family: var(--font-serif); font-size: 24px; margin: 24px 0 16px; color: var(--terracotta);">
+                            Studio Elumedica - Chiari</h3>
+                        <p>
+                            <strong>📍 Indirizzo:</strong><br>
+                            Via Maffoni 19, 25032 Chiari (BS)
+                        </p>
+                        <p>
+                            Lo studio si trova a <strong>Chiari</strong>, facilmente raggiungibile da <strong>Brescia e
+                                da tutta la provincia</strong>. È disponibile parcheggio nelle vicinanze.
+                        </p>
+                        <p>
+                            <strong>🕒 Orari:</strong><br>
+                            Giovedì: 9:00 - 19:00<br>
+                            (Su appuntamento)
+                        </p>
+
+                        <h3
+                            style="font-family: var(--font-serif); font-size: 24px; margin: 32px 0 16px; color: var(--terracotta);">
+                            Consulenze Online</h3>
+                        <p>
+                            Offro anche <strong>consulenze psicologiche online</strong> tramite videochiamata su
+                            piattaforme sicure (Zoom, Google Meet, Skype). Ideale per chi vive lontano o preferisce la
+                            comodità del colloquio da casa.
+                        </p>
+                    </div>
+
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.8!2d9.9297!3d45.5378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47815a9b5e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2sVia%20Maffoni%2019%2C%2026032%20Chiari%20BS!5e0!3m2!1sit!2sit!4v1234567890"
+                            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Mappa Studio Psicologa Chiari - Via Maffoni 19">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Pronto a iniziare il tuo percorso?</h2>
+                <p>Il primo passo è il più importante. Contattami per una consulenza</p>
+                <div>
+                    <a href="mailto:manueladurizzi@gmail.com" class="btn">Invia Email</a>
+                    <a href="tel:+393520019266" class="btn btn-secondary">Chiama Ora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>© 2026 Dott.ssa Manuela Durizzi</strong> • Psicologa Clinica Chiari</p>
+            <p>Chiari, Lombardia • Ordine Psicologi Lombardia n. 30473</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="it" itemscope itemtype="https://schema.org/WebPage">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Servizi di Psicologia | Dott.ssa Manuela Durizzi - Psicologa Chiari</title>
+    <meta name="description"
+        content="Servizi di psicologia clinica a Chiari: gestione ansia e stress, crescita personale, supporto DSA, consulenza familiare. Colloqui online e in presenza.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://manueladurizzi.it/servizi.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Servizi di Psicologia | Psicologa Chiari">
+    <meta property="og:description"
+        content="Servizi psicologici personalizzati: ansia, stress, crescita personale, DSA. Studio a Chiari e consulenze online.">
+    <meta property="og:url" content="https://manueladurizzi.it/servizi.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <meta name="theme-color" content="#9CAF88">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Servizi di Psicologia Clinica",
+      "provider": {
+        "@type": "Person",
+        "name": "Manuela Durizzi",
+        "jobTitle": "Psicologa Clinica"
+      },
+      "areaServed": "Chiari, Brescia, Lombardia",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Online e In Presenza"
+      }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FAF8F5;
+            --sage: #9CAF88;
+            --sage-light: #B8C5AA;
+            --sage-dark: #7A8B6F;
+            --terracotta: #C4977A;
+            --forest: #3D4A3A;
+            --charcoal: #2C2C2C;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --white: #FFFFFF;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Inter', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--cream);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--forest);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dark);
+        }
+
+        /* Hero */
+        .page-hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--sage-light) 100%);
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 16px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 80px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-header {
+            padding: 40px;
+            background: linear-gradient(135deg, var(--sage-light), var(--cream));
+        }
+
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .service-header h2 {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 8px;
+        }
+
+        .service-body {
+            padding: 30px 40px 40px;
+        }
+
+        .service-body p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-body ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .service-body ul li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .service-body ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: var(--forest);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
+            margin-top: 16px;
+        }
+
+        .btn:hover {
+            background: var(--sage-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--forest);
+            border: 2px solid var(--forest);
+        }
+
+        .btn-secondary:hover {
+            background: var(--forest);
+            color: var(--white);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: var(--forest);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 4vw, 42px);
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-section .btn {
+            background: var(--white);
+            color: var(--forest);
+        }
+
+        .cta-section .btn:hover {
+            background: var(--sage-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Manuela Durizzi</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chi-sono.html">Chi Sono</a></li>
+                    <li><a href="servizi.html">Servizi</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Servizi di Psicologia Clinica</h1>
+            <p>Percorsi personalizzati per il tuo benessere psicologico. Online e in presenza a Chiari (BS)</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="services-section">
+            <div class="container">
+                <div class="services-grid">
+
+                    <!-- Service 1: Gestione Ansia e Stress -->
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🧘</div>
+                            <h2>Gestione Ansia e Stress</h2>
+                        </div>
+                        <div class="service-body">
+                            <p>
+                                Percorsi specializzati per affrontare <strong>ansia, attacchi di panico e stress
+                                    cronico</strong>. Impara tecniche evidence-based per ritrovare serenità e equilibrio
+                                nella vita quotidiana.
+                            </p>
+                            <ul>
+                                <li>Tecniche di gestione dell'ansia</li>
+                                <li>Intervento su attacchi di panico</li>
+                                <li>Gestione dello stress lavorativo</li>
+                                <li>Prevenzione del burnout</li>
+                            </ul>
+                            <a href="servizi/ansia-stress.html" class="btn">Scopri di più</a>
+                        </div>
+                    </article>
+
+                    <!-- Service 2: Crescita Personale -->
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🌱</div>
+                            <h2>Crescita Personale</h2>
+                        </div>
+                        <div class="service-body">
+                            <p>
+                                Percorsi di <strong>sviluppo personale e consapevolezza emotiva</strong> per chi
+                                desidera migliorare la qualità della propria vita, sviluppare autostima e raggiungere i
+                                propri obiettivi.
+                            </p>
+                            <ul>
+                                <li>Aumento dell'autostima</li>
+                                <li>Gestione delle emozioni</li>
+                                <li>Sviluppo intelligenza emotiva</li>
+                                <li>Definizione obiettivi di vita</li>
+                            </ul>
+                            <a href="servizi/crescita-personale.html" class="btn">Scopri di più</a>
+                        </div>
+                    </article>
+
+                    <!-- Service 3: Supporto Apprendimento DSA -->
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">📚</div>
+                            <h2>Supporto Apprendimento DSA</h2>
+                        </div>
+                        <div class="service-body">
+                            <p>
+                                <strong>Tutoring specializzato per studenti con DSA</strong> e difficoltà di
+                                apprendimento. Metodologie personalizzate, strumenti compensativi e supporto emotivo.
+                            </p>
+                            <ul>
+                                <li>Tutoring DSA (dislessia, discalculia, disgrafia)</li>
+                                <li>Metodo di studio personalizzato</li>
+                                <li>Strumenti compensativi</li>
+                                <li>Supporto emotivo studente e famiglia</li>
+                            </ul>
+                            <a href="servizi/supporto-apprendimento.html" class="btn">Scopri di più</a>
+                        </div>
+                    </article>
+
+                    <!-- Service 4: Supporto Genitorialità -->
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">👨‍👩‍👧</div>
+                            <h2>Supporto alla Genitorialità</h2>
+                        </div>
+                        <div class="service-body">
+                            <p>
+                                Consulenza psicologica per <strong>genitori e famiglie</strong> che affrontano sfide
+                                educative, relazionali o momenti di transizione del ciclo di vita familiare.
+                            </p>
+                            <ul>
+                                <li>Consulenza genitoriale</li>
+                                <li>Gestione conflitti familiari</li>
+                                <li>Supporto nelle separazioni</li>
+                                <li>Parent training</li>
+                            </ul>
+                            <a href="contatti.html" class="btn-secondary btn">Prenota Consulenza</a>
+                        </div>
+                    </article>
+
+                    <!-- Service 5: Disturbi dell'Umore -->
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">💙</div>
+                            <h2>Disturbi dell'Umore</h2>
+                        </div>
+                        <div class="service-body">
+                            <p>
+                                Supporto psicologico per <strong>depressione, tristezza persistente e sbalzi
+                                    d'umore</strong>. Un percorso per ritrovare motivazione, energia e piacere nella
+                                vita.
+                            </p>
+                            <ul>
+                                <li>Trattamento depressione</li>
+                                <li>Gestione tristezza cronica</li>
+                                <li>Recupero motivazione</li>
+                                <li>Prevenzione ricadute</li>
+                            </ul>
+                            <a href="contatti.html" class="btn-secondary btn">Prenota Consulenza</a>
+                        </div>
+                    </article>
+
+                    <!-- Service 6: Consulenze Online -->
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">💻</div>
+                            <h2>Consulenze Online</h2>
+                        </div>
+                        <div class="service-body">
+                            <p>
+                                <strong>Colloqui psicologici online</strong> comodamente da casa tua. Stessa
+                                professionalità e riservatezza, massima flessibilità. Disponibile in tutta Italia.
+                            </p>
+                            <ul>
+                                <li>Piattaforme sicure e certificate</li>
+                                <li>Flessibilità oraria</li>
+                                <li>Privacy garantita</li>
+                                <li>Disponibile in tutta Italia</li>
+                            </ul>
+                            <a href="contatti.html" class="btn-secondary btn">Prenota Online</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Pronto a iniziare il tuo percorso?</h2>
+                <p>Il primo passo verso il benessere è decidere di prenderti cura di te</p>
+                <a href="contatti.html" class="btn">Contattami Ora</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>© 2026 Dott.ssa Manuela Durizzi</strong> • Psicologa Clinica Chiari</p>
+            <p>Chiari, Lombardia • Ordine Psicologi Lombardia n. 30473</p>
+        </div>
+    </footer>
+</body>
+
+</html>

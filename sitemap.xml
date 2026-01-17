@@ -3,61 +3,69 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
-    <!-- Homepage - Psicologa Bergamo -->
+
+    <!-- Homepage -->
     <url>
         <loc>https://manueladurizzi.it/</loc>
-        <lastmod>2026-01-02</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- Sezione Chi Sono -->
+
+    <!-- Chi Sono -->
     <url>
-        <loc>https://manueladurizzi.it/#about</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://manueladurizzi.it/chi-sono.html</loc>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
-    <!-- Sezione Competenze -->
+
+    <!-- Servizi Main -->
     <url>
-        <loc>https://manueladurizzi.it/#skills</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://manueladurizzi.it/servizi.html</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Servizio: Ansia e Stress -->
+    <url>
+        <loc>https://manueladurizzi.it/servizi/ansia-stress.html</loc>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Sezione Esperienza -->
+
+    <!-- Servizio: Crescita Personale -->
     <url>
-        <loc>https://manueladurizzi.it/#experience</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://manueladurizzi.it/servizi/crescita-personale.html</loc>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Sezione Progetti -->
+
+    <!-- Servizio: Supporto Apprendimento DSA -->
     <url>
-        <loc>https://manueladurizzi.it/#projects</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://manueladurizzi.it/servizi/supporto-apprendimento.html</loc>
+        <lastmod>2026-01-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- FAQ -->
+    <url>
+        <loc>https://manueladurizzi.it/faq.html</loc>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
-    <!-- Sezione Dove Ricevo - Location -->
+
+    <!-- Contatti -->
     <url>
-        <loc>https://manueladurizzi.it/#location</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://manueladurizzi.it/contatti.html</loc>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.8</priority>
     </url>
-    
-    <!-- Sezione Contatti -->
-    <url>
-        <loc>https://manueladurizzi.it/#contact</loc>
-        <lastmod>2026-01-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
+
 </urlset>

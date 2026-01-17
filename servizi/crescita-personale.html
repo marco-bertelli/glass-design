@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescita Personale | Psicologa Chiari - Dott.ssa Manuela Durizzi</title>
+    <meta name="description"
+        content="Percorsi di crescita personale a Chiari: sviluppo autostima, consapevolezza emotiva, intelligenza emotiva. Psicologa online e in presenza.">
+    <link rel="canonical" href="https://manueladurizzi.it/servizi/crescita-personale.html">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FAF8F5;
+            --sage: #9CAF88;
+            --sage-light: #B8C5AA;
+            --sage-dark: #7A8B6F;
+            --forest: #3D4A3A;
+            --charcoal: #2C2C2C;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --white: #FFFFFF;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--cream);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--forest);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .page-hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, var(--cream), var(--sage-light));
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 16px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-section.white {
+            background: var(--white);
+        }
+
+        .content-text h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 4vw, 42px);
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 24px;
+        }
+
+        .content-text h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--forest);
+            margin: 32px 0 16px;
+        }
+
+        .content-text p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .content-text ul {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .content-text ul li {
+            padding: 12px 0 12px 32px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .content-text ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .highlight-box {
+            background: var(--sage-light);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: var(--forest);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--sage-dark);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">Manuela Durizzi</a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../chi-sono.html">Chi Sono</a></li>
+                    <li><a href="../servizi.html">Servizi</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Crescita Personale</h1>
+            <p>Sviluppa il tuo potenziale e costruisci una vita più autentica e soddisfacente</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="content-section white">
+            <div class="container">
+                <div class="content-text">
+                    <h2>Cos'è la Crescita Personale?</h2>
+                    <p>
+                        La <strong>crescita personale</strong> è un percorso di esplorazione e sviluppo di sé che
+                        permette di conoscersi più profondamente, migliorare la propria qualità di vita e realizzare il
+                        proprio potenziale.
+                    </p>
+                    <p>
+                        Nel mio studio a <strong>Chiari (Brescia)</strong>, accompagno persone che desiderano migliorare
+                        l'autostima, sviluppare consapevolezza emotiva, definire obiettivi di vita chiari e costruire
+                        relazioni più soddisfacenti.
+                    </p>
+
+                    <h3>A chi è rivolto questo percorso?</h3>
+                    <ul>
+                        <li>Chi desidera aumentare la propria autostima e fiducia in sé</li>
+                        <li>Chi vuole migliorare la gestione delle emozioni</li>
+                        <li>Chi si sente bloccato e desidera un cambiamento</li>
+                        <li>Chi vuole sviluppare intelligenza emotiva</li>
+                        <li>Chi cerca maggiore consapevolezza di sé</li>
+                        <li>Chi vuole definire e raggiungere obiettivi personali</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-text">
+                    <h2>Aree di intervento</h2>
+
+                    <h3>Sviluppo dell'Autostima</h3>
+                    <p>
+                        Lavoriamo insieme per riconoscere il tuo valore, superare l'autocritica eccessiva e costruire
+                        una visione più equilibrata e compassionevole di te stesso.
+                    </p>
+
+                    <h3>Intelligenza Emotiva</h3>
+                    <p>
+                        Impara a riconoscere, comprendere e gestire le tue emozioni in modo sano. Sviluppa empatia e
+                        migliora le tue relazioni interpersonali.
+                    </p>
+
+                    <h3>Consapevolezza di Sé</h3>
+                    <p>
+                        Esplora i tuoi valori, bisogni, desideri autentici. Comprendi meglio chi sei e cosa vuoi davvero
+                        dalla vita.
+                    </p>
+
+                    <div class="highlight-box">
+                        <h3>Definizione di Obiettivi</h3>
+                        <p>
+                            Ti aiuto a <strong>definire obiettivi chiari e raggiungibili</strong>, identificare ostacoli
+                            interni ed esterni, e creare un piano d'azione concreto per realizzare i tuoi progetti di
+                            vita.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section white">
+            <div class="container">
+                <div class="content-text">
+                    <h2>Come lavoriamo insieme</h2>
+                    <p>
+                        Il percorso di crescita personale è un viaggio collaborativo. Tu sei il protagonista, io sono la
+                        guida che ti accompagna nell'esplorazione e ti supporta nel raggiungimento dei tuoi obiettivi.
+                    </p>
+
+                    <h3>Il mio approccio</h3>
+                    <ul>
+                        <li><strong>Ascolto empatico</strong> - Uno spazio sicuro dove sentirti compreso e accolto</li>
+                        <li><strong>Esplorazione guidata</strong> - Domande che stimolano la riflessione profonda</li>
+                        <li><strong>Strumenti pratici</strong> - Tecniche concrete da applicare nella vita quotidiana
+                        </li>
+                        <li><strong>Feedback costruttivo</strong> - Prospettive nuove per vedere te stesso e le
+                            situazioni</li>
+                        <li><strong>Responsabilizzazione</strong> - Ti guido a diventare autonomo nel tuo processo di
+                            crescita</li>
+                    </ul>
+
+                    <h3>Dove ci incontriamo</h3>
+                    <p>
+                        Offro <strong>consulenze in presenza</strong> nel mio studio a Chiari (BS) e <strong>consulenze
+                            psicologiche online</strong> tramite piattaforme sicure, per garantirti massima
+                        flessibilità.
+                    </p>
+
+                    <a href="../contatti.html" class="btn">Inizia il Tuo Percorso</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>© 2026 Dott.ssa Manuela Durizzi</strong> • Psicologa Clinica Chiari</p>
+            <p>Chiari, Lombardia • Ordine Psicologi Lombardia n. 30473</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supporto DSA e Apprendimento | Tutor Chiari - Dott.ssa Manuela Durizzi</title>
+    <meta name="description"
+        content="Tutor dell'apprendimento specializzata DSA a Chiari. Supporto per dislessia, discalculia, disgrafia. Metodo di studio personalizzato e strumenti compensativi.">
+    <link rel="canonical" href="https://manueladurizzi.it/servizi/supporto-apprendimento.html">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FAF8F5;
+            --sage: #9CAF88;
+            --sage-light: #B8C5AA;
+            --sage-dark: #7A8B6F;
+            --forest: #3D4A3A;
+            --charcoal: #2C2C2C;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --white: #FFFFFF;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--cream);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--forest);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .page-hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, var(--cream), var(--sage-light));
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 16px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-section.white {
+            background: var(--white);
+        }
+
+        .content-text h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 4vw, 42px);
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 24px;
+        }
+
+        .content-text h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--forest);
+            margin: 32px 0 16px;
+        }
+
+        .content-text p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .content-text ul {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .content-text ul li {
+            padding: 12px 0 12px 32px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .content-text ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .highlight-box {
+            background: var(--sage-light);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: var(--forest);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--sage-dark);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">Manuela Durizzi</a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../chi-sono.html">Chi Sono</a></li>
+                    <li><a href="../servizi.html">Servizi</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Supporto Apprendimento e DSA</h1>
+            <p>Tutoring specializzato per studenti con difficoltà di apprendimento</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="content-section white">
+            <div class="container">
+                <div class="content-text">
+                    <h2>Tutor dell'Apprendimento Specializzata DSA</h2>
+                    <p>
+                        Sono <strong>Tutor dell'Apprendimento certificata</strong> e <strong>Psicologa Clinica</strong>
+                        specializzata nel supporto a bambini e ragazzi con <strong>Disturbi Specifici dell'Apprendimento
+                            (DSA)</strong> e difficoltà scolastiche.
+                    </p>
+                    <p>
+                        Nel mio studio a <strong>Chiari (Brescia)</strong>, offro un approccio personalizzato che
+                        combina competenze psicologiche e pedagogiche per aiutare ogni studente a sviluppare un metodo
+                        di studio efficace e ritrovare fiducia nelle proprie capacità.
+                    </p>
+
+                    <h3>Cosa sono i DSA?</h3>
+                    <p>
+                        I <strong>Disturbi Specifici dell'Apprendimento</strong> sono difficoltà che riguardano abilità
+                        specifiche come lettura, scrittura e calcolo, in presenza di un'intelligenza nella norma. Non
+                        sono causati da pigrizia o scarsa volontà, ma da un diverso funzionamento neurologico.
+                    </p>
+
+                    <ul>
+                        <li><strong>Dislessia</strong> - Difficoltà nella lettura (velocità e correttezza)</li>
+                        <li><strong>Disgrafia</strong> - Difficoltà nella scrittura (grafia poco leggibile)</li>
+                        <li><strong>Disortografia</strong> - Difficoltà ortografiche (errori di spelling)</li>
+                        <li><strong>Discalculia</strong> - Difficoltà nel calcolo e nei numeri</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-text">
+                    <h2>Come posso aiutare tuo figlio</h2>
+                    <p>
+                        Il mio intervento come <strong>tutor DSA</strong> si concentra su tre aspetti fondamentali: il
+                        metodo di studio, l'autonomia e il benessere emotivo dello studente.
+                    </p>
+
+                    <h3>Metodo di Studio Personalizzato</h3>
+                    <p>
+                        Ogni studente è unico. Costruiamo insieme un <strong>metodo di studio su misura</strong> che
+                        tenga conto delle sue caratteristiche, dei suoi punti di forza e delle aree di difficoltà.
+                    </p>
+                    <ul>
+                        <li>Tecniche di lettura efficace</li>
+                        <li>Strategie di memorizzazione</li>
+                        <li>Organizzazione del tempo e dei materiali</li>
+                        <li>Metodi di sintesi e schematizzazione</li>
+                    </ul>
+
+                    <h3>Strumenti Compensativi</h3>
+                    <p>
+                        Insegno ad utilizzare <strong>strumenti compensativi digitali e analogici</strong> che
+                        permettono di bypassare le difficoltà e valorizzare le potenzialità.
+                    </p>
+                    <ul>
+                        <li>Software di sintesi vocale</li>
+                        <li>Programmi per mappe concettuali</li>
+                        <li>Calcolatrici e formulari</li>
+                        <li>Audiolibri e registrazioni</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h3>Supporto Emotivo</h3>
+                        <p>
+                            Gli studenti con DSA spesso vivono frustrazione, bassa autostima e ansia scolastica. Come
+                            psicologa, offro anche un <strong>sostegno psicologico</strong> per aiutare il ragazzo a
+                            ritrovare fiducia in sé, gestire l'ansia da prestazione e sviluppare una visione positiva
+                            delle proprie capacità.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section white">
+            <div class="container">
+                <div class="content-text">
+                    <h2>Supporto alla Famiglia</h2>
+                    <p>
+                        Il percorso di tutoring coinvolge anche i <strong>genitori</strong>. Offro consulenza per
+                        comprendere meglio le difficoltà del figlio, supportarlo nei compiti a casa e collaborare
+                        efficacemente con la scuola.
+                    </p>
+
+                    <h3>Collaborazione con la Scuola</h3>
+                    <p>
+                        Lavoro in rete con insegnanti e scuola per garantire l'applicazione del <strong>Piano Didattico
+                            Personalizzato (PDP)</strong> e favorire il successo scolastico dello studente.
+                    </p>
+
+                    <h3>Chi può beneficiare del tutoring?</h3>
+                    <ul>
+                        <li>Studenti con diagnosi di DSA</li>
+                        <li>Ragazzi con difficoltà scolastiche generiche</li>
+                        <li>Studenti con scarsa motivazione allo studio</li>
+                        <li>Ragazzi che vogliono migliorare il metodo di studio</li>
+                    </ul>
+
+                    <h3>Dove ricevo</h3>
+                    <p>
+                        Offro servizi di <strong>tutoring in presenza</strong> nel mio studio a Chiari (BS) e
+                        <strong>tutoring online</strong> per famiglie che preferiscono lezioni a distanza.
+                    </p>
+
+                    <a href="../contatti.html" class="btn">Prenota un Colloquio Conoscitivo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>© 2026 Dott.ssa Manuela Durizzi</strong> • Psicologa Clinica e Tutor DSA Chiari</p>
+            <p>Chiari, Lombardia • Ordine Psicologi Lombardia n. 30473</p>
+        </div>
+    </footer>
+</body>
+
+</html>
