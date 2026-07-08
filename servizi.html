@@ -20,13 +20,13 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <meta name="theme-color" content="#9CAF88">
+    <meta name="theme-color" content="#5B5FA6">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
     <script type="application/ld+json">
@@ -47,266 +47,7 @@
     }
     </script>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --cream: #FAF8F5;
-            --sage: #9CAF88;
-            --sage-light: #B8C5AA;
-            --sage-dark: #7A8B6F;
-            --terracotta: #C4977A;
-            --forest: #3D4A3A;
-            --charcoal: #2C2C2C;
-            --text-primary: #2C2C2C;
-            --text-secondary: #5A5A5A;
-            --white: #FFFFFF;
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --font-sans: 'Inter', sans-serif;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background: var(--cream);
-            color: var(--text-primary);
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 20px 0;
-            background: rgba(250, 248, 245, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--forest);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--sage-dark);
-        }
-
-        /* Hero */
-        .page-hero {
-            padding: 140px 0 80px;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--sage-light) 100%);
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(40px, 5vw, 56px);
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 16px;
-        }
-
-        .page-hero p {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Services Grid */
-        .services-section {
-            padding: 80px 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .service-card {
-            background: var(--white);
-            border-radius: 24px;
-            overflow: hidden;
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-header {
-            padding: 40px;
-            background: linear-gradient(135deg, var(--sage-light), var(--cream));
-        }
-
-        .service-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .service-header h2 {
-            font-family: var(--font-serif);
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 8px;
-        }
-
-        .service-body {
-            padding: 30px 40px 40px;
-        }
-
-        .service-body p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .service-body ul {
-            list-style: none;
-            margin: 20px 0;
-        }
-
-        .service-body ul li {
-            padding: 8px 0 8px 28px;
-            position: relative;
-            color: var(--text-secondary);
-        }
-
-        .service-body ul li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--sage);
-            font-weight: bold;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            background: var(--forest);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            font-size: 14px;
-            transition: var(--transition);
-            margin-top: 16px;
-        }
-
-        .btn:hover {
-            background: var(--sage-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--forest);
-            border: 2px solid var(--forest);
-        }
-
-        .btn-secondary:hover {
-            background: var(--forest);
-            color: var(--white);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 0;
-            background: var(--forest);
-            color: var(--white);
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-family: var(--font-serif);
-            font-size: clamp(32px, 4vw, 42px);
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .cta-section .btn {
-            background: var(--white);
-            color: var(--forest);
-        }
-
-        .cta-section .btn:hover {
-            background: var(--sage-light);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--charcoal);
-            color: rgba(255, 255, 255, 0.6);
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 14px;
-            margin: 8px 0;
-        }
-
-        footer strong {
-            color: var(--white);
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -314,7 +55,8 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">Manuela Durizzi</a>
-                <ul class="nav-links">
+                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navLinks">☰</button>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="chi-sono.html">Chi Sono</a></li>
                     <li><a href="servizi.html">Servizi</a></li>
@@ -466,6 +208,27 @@
                         </div>
                     </article>
 
+                    <!-- Service 7: Autismo ed Età Evolutiva -->
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🧒</div>
+                            <h2>Autismo ed Età Evolutiva</h2>
+                        </div>
+                        <div class="service-body">
+                            <p>
+                                <strong>Interventi con bambini con autismo</strong> in équipe multidisciplinare, con un
+                                lavoro mirato sullo sviluppo delle competenze e sull'inclusione.
+                            </p>
+                            <ul>
+                                <li>Sviluppo della comunicazione</li>
+                                <li>Autonomie personali quotidiane</li>
+                                <li>Inserimento e inclusione sociale</li>
+                                <li>Lavoro in équipe multidisciplinare</li>
+                            </ul>
+                            <a href="contatti.html" class="btn-secondary btn">Prenota Consulenza</a>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
@@ -486,6 +249,7 @@
             <p>Chiari, Lombardia • Ordine Psicologi Lombardia n. 30473</p>
         </div>
     </footer>
+    <script src="main.js" defer></script>
 </body>
 
 </html>

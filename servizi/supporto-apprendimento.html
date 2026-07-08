@@ -10,199 +10,10 @@
     <link rel="canonical" href="https://manueladurizzi.it/servizi/supporto-apprendimento.html">
     <link rel="icon" type="image/png" href="/favicon-32x32.png">
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --cream: #FAF8F5;
-            --sage: #9CAF88;
-            --sage-light: #B8C5AA;
-            --sage-dark: #7A8B6F;
-            --forest: #3D4A3A;
-            --charcoal: #2C2C2C;
-            --text-primary: #2C2C2C;
-            --text-secondary: #5A5A5A;
-            --white: #FFFFFF;
-            --font-serif: 'Cormorant Garamond', serif;
-            --font-sans: 'Inter', sans-serif;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background: var(--cream);
-            color: var(--text-primary);
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 20px 0;
-            background: rgba(250, 248, 245, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--forest);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        .page-hero {
-            padding: 140px 0 80px;
-            background: linear-gradient(135deg, var(--cream), var(--sage-light));
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(40px, 5vw, 56px);
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 16px;
-        }
-
-        .page-hero p {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .content-section {
-            padding: 80px 0;
-        }
-
-        .content-section.white {
-            background: var(--white);
-        }
-
-        .content-text h2 {
-            font-family: var(--font-serif);
-            font-size: clamp(32px, 4vw, 42px);
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 24px;
-        }
-
-        .content-text h3 {
-            font-family: var(--font-serif);
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--forest);
-            margin: 32px 0 16px;
-        }
-
-        .content-text p {
-            font-size: 16px;
-            color: var(--text-secondary);
-            line-height: 1.9;
-            margin-bottom: 20px;
-        }
-
-        .content-text ul {
-            list-style: none;
-            margin: 24px 0;
-        }
-
-        .content-text ul li {
-            padding: 12px 0 12px 32px;
-            position: relative;
-            color: var(--text-secondary);
-        }
-
-        .content-text ul li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--sage);
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .highlight-box {
-            background: var(--sage-light);
-            padding: 40px;
-            border-radius: 20px;
-            margin: 40px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            background: var(--forest);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            margin-top: 20px;
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            background: var(--sage-dark);
-            transform: translateY(-2px);
-        }
-
-        footer {
-            background: var(--charcoal);
-            color: rgba(255, 255, 255, 0.6);
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 14px;
-            margin: 8px 0;
-        }
-
-        footer strong {
-            color: var(--white);
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
@@ -210,7 +21,8 @@
         <div class="container">
             <nav>
                 <a href="../index.html" class="logo">Manuela Durizzi</a>
-                <ul class="nav-links">
+                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navLinks">☰</button>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../chi-sono.html">Chi Sono</a></li>
                     <li><a href="../servizi.html">Servizi</a></li>
@@ -349,6 +161,7 @@
             <p>Chiari, Lombardia • Ordine Psicologi Lombardia n. 30473</p>
         </div>
     </footer>
+    <script src="../main.js" defer></script>
 </body>
 
 </html>

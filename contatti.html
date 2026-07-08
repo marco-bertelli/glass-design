@@ -10,277 +10,10 @@
     <link rel="canonical" href="https://manueladurizzi.it/contatti.html">
     <link rel="icon" type="image/png" href="/favicon-32x32.png">
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --cream: #FAF8F5;
-            --sage: #9CAF88;
-            --sage-light: #B8C5AA;
-            --sage-dark: #7A8B6F;
-            --forest: #3D4A3A;
-            --charcoal: #2C2C2C;
-            --text-primary: #2C2C2C;
-            --text-secondary: #5A5A5A;
-            --white: #FFFFFF;
-            --font-serif: 'Cormorant Garamond', serif;
-            --font-sans: 'Inter', sans-serif;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background: var(--cream);
-            color: var(--text-primary);
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 20px 0;
-            background: rgba(250, 248, 245, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--forest);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        .page-hero {
-            padding: 140px 0 80px;
-            background: linear-gradient(135deg, var(--cream), var(--sage-light));
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(40px, 5vw, 56px);
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 16px;
-        }
-
-        .page-hero p {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .contact-section {
-            padding: 80px 0;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .contact-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.3s;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .contact-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 20px;
-            background: var(--sage-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-        }
-
-        .contact-card h3 {
-            font-family: var(--font-serif);
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 12px;
-        }
-
-        .contact-card a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 16px;
-            transition: all 0.3s;
-        }
-
-        .contact-card a:hover {
-            color: var(--sage-dark);
-        }
-
-        .location-section {
-            background: var(--white);
-            padding: 80px 0;
-        }
-
-        .location-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .location-text h2 {
-            font-family: var(--font-serif);
-            font-size: clamp(32px, 4vw, 42px);
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 24px;
-        }
-
-        .location-text p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .location-text strong {
-            color: var(--forest);
-        }
-
-        .map-wrapper {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            height: 400px;
-        }
-
-        .map-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .cta-section {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-family: var(--font-serif);
-            font-size: clamp(32px, 4vw, 42px);
-            color: var(--forest);
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 18px;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            background: var(--forest);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s;
-            margin: 0 10px;
-        }
-
-        .btn:hover {
-            background: var(--sage-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--forest);
-            border: 2px solid var(--forest);
-        }
-
-        .btn-secondary:hover {
-            background: var(--forest);
-            color: var(--white);
-        }
-
-        footer {
-            background: var(--charcoal);
-            color: rgba(255, 255, 255, 0.6);
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 14px;
-            margin: 8px 0;
-        }
-
-        footer strong {
-            color: var(--white);
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .location-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -288,7 +21,8 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">Manuela Durizzi</a>
-                <ul class="nav-links">
+                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navLinks">☰</button>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="chi-sono.html">Chi Sono</a></li>
                     <li><a href="servizi.html">Servizi</a></li>
@@ -335,9 +69,9 @@
 
                     <article class="contact-card">
                         <div class="contact-icon">🩺</div>
-                        <h3>MioDottore</h3>
-                        <a href="https://www.miodottore.it/manuela-durizzi/psicologo-clinico/chiari" target="_blank"
-                            rel="noopener">Prenota su MioDottore</a>
+                        <h3>GuidaPsicologi</h3>
+                        <a href="https://www.guidapsicologi.it/studio/manuela-durizzi" target="_blank"
+                            rel="noopener">Prenota su GuidaPsicologi</a>
                         <p style="margin-top: 12px; font-size: 14px; color: var(--text-light);">Prenotazione online</p>
                     </article>
                 </div>
@@ -405,6 +139,7 @@
             <p>Chiari, Lombardia • Ordine Psicologi Lombardia n. 30473</p>
         </div>
     </footer>
+    <script src="main.js" defer></script>
 </body>
 
 </html>

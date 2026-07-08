@@ -29,13 +29,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <meta name="theme-color" content="#9CAF88">
+    <meta name="theme-color" content="#5B5FA6">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
     <!-- Schema.org Structured Data -->
@@ -66,242 +66,7 @@
     }
     </script>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --cream: #FAF8F5;
-            --cream-dark: #F0EBE3;
-            --sage: #9CAF88;
-            --sage-light: #B8C5AA;
-            --sage-dark: #7A8B6F;
-            --terracotta: #C4977A;
-            --terracotta-light: #D4B39E;
-            --forest: #3D4A3A;
-            --charcoal: #2C2C2C;
-            --text-primary: #2C2C2C;
-            --text-secondary: #5A5A5A;
-            --text-light: #7A7A7A;
-            --white: #FFFFFF;
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background: var(--cream);
-            color: var(--text-primary);
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 20px 0;
-            background: rgba(250, 248, 245, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--forest);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--sage-dark);
-        }
-
-        /* Hero Section */
-        .page-hero {
-            padding: 140px 0 80px;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--sage-light) 100%);
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(40px, 5vw, 56px);
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 16px;
-        }
-
-        .page-hero p {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Content Sections */
-        .content-section {
-            padding: 80px 0;
-        }
-
-        .content-section.white {
-            background: var(--white);
-        }
-
-        .section-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .content-text h2 {
-            font-family: var(--font-serif);
-            font-size: clamp(32px, 4vw, 42px);
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 24px;
-        }
-
-        .content-text h3 {
-            font-family: var(--font-serif);
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--forest);
-            margin: 32px 0 16px;
-        }
-
-        .content-text p {
-            font-size: 16px;
-            color: var(--text-secondary);
-            line-height: 1.9;
-            margin-bottom: 20px;
-        }
-
-        .content-text ul {
-            list-style: none;
-            margin: 24px 0;
-        }
-
-        .content-text ul li {
-            padding: 12px 0 12px 32px;
-            position: relative;
-            color: var(--text-secondary);
-        }
-
-        .content-text ul li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--sage);
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .image-wrapper {
-            position: relative;
-        }
-
-        .image-wrapper img {
-            width: 100%;
-            border-radius: 24px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .credentials-box {
-            background: var(--sage-light);
-            padding: 40px;
-            border-radius: 20px;
-            margin: 40px 0;
-        }
-
-        .credentials-box h3 {
-            margin-top: 0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            background: var(--forest);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: var(--transition);
-            margin-top: 20px;
-        }
-
-        .btn:hover {
-            background: var(--sage-dark);
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--charcoal);
-            color: rgba(255, 255, 255, 0.6);
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 14px;
-            margin: 8px 0;
-        }
-
-        footer strong {
-            color: var(--white);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .section-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -310,7 +75,8 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">Manuela Durizzi</a>
-                <ul class="nav-links">
+                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="navLinks">☰</button>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="chi-sono.html">Chi Sono</a></li>
                     <li><a href="servizi.html">Servizi</a></li>
@@ -400,6 +166,7 @@
                         <li>Percorsi di crescita personale e consapevolezza emotiva</li>
                         <li>Supporto alla genitorialità e consulenza familiare</li>
                         <li>Tutoring per studenti con DSA e difficoltà di apprendimento</li>
+                        <li>Interventi sull'autismo in età evolutiva: comunicazione, autonomie, inserimento sociale</li>
                         <li>Gestione delle dipendenze comportamentali</li>
                     </ul>
                 </div>
@@ -412,8 +179,16 @@
                 <div class="content-text">
                     <h2>Esperienza Professionale</h2>
                     <p>
-                        Oltre alla pratica clinica privata, ho maturato esperienze significative in contesti educativi e
-                        di tutela, che arricchiscono il mio approccio professionale.
+                        Oltre alla pratica clinica privata, ho maturato esperienze significative in contesti clinici,
+                        educativi e di tutela, che arricchiscono il mio approccio professionale.
+                    </p>
+
+                    <h3>Psicologa - Fondazione Angelo Custode Onlus (Predore)</h3>
+                    <p>
+                        Lavoro come psicologa presso la <strong>Fondazione Angelo Custode Onlus di Predore (BG)</strong>,
+                        all'interno di un'<strong>équipe multidisciplinare</strong>. Mi occupo di terapie e trattamenti
+                        con bambini con <strong>autismo a basso funzionamento</strong>, con interventi mirati sullo
+                        sviluppo della comunicazione, sulle autonomie personali e sull'inserimento sociale.
                     </p>
 
                     <h3>Educatrice - L'Impronta Cooperativa Sociale</h3>
@@ -478,6 +253,7 @@
             <p style="margin-top: 15px; opacity: 0.6;">Progettato con cura per connessioni autentiche</p>
         </div>
     </footer>
+    <script src="main.js" defer></script>
 </body>
 
 </html>

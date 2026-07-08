@@ -94,8 +94,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#9CAF88">
-    <meta name="msapplication-TileColor" content="#9CAF88">
+    <meta name="theme-color" content="#5B5FA6">
+    <meta name="msapplication-TileColor" content="#5B5FA6">
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,7 +105,7 @@
 
     <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
     <!-- Schema.org Structured Data - Person -->
@@ -167,7 +167,9 @@
         "Educazione",
         "Ascolto Attivo",
         "Tutor dell'Apprendimento",
-        "Intelligenza Emotiva"
+        "Intelligenza Emotiva",
+        "Autismo in Età Evolutiva",
+        "Disturbi del Neurosviluppo"
       ],
       "sameAs": [
         "https://www.linkedin.com/in/manuela-durizzi-485a28371/"
@@ -422,992 +424,18 @@
     }
     </script>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Screen Reader Only - SEO Hidden Text */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        :root {
-            /* Organic & Serene Palette */
-            --cream: #FAF8F5;
-            --cream-dark: #F0EBE3;
-            --sage: #9CAF88;
-            --sage-light: #B8C5AA;
-            --sage-dark: #7A8B6F;
-            --terracotta: #C4977A;
-            --terracotta-light: #D4B39E;
-            --terracotta-dark: #A67B5B;
-            --forest: #3D4A3A;
-            --charcoal: #2C2C2C;
-            --text-primary: #2C2C2C;
-            --text-secondary: #5A5A5A;
-            --text-light: #7A7A7A;
-            --gold: #C9A962;
-            --white: #FFFFFF;
-
-            /* Typography */
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-
-            /* Transitions */
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background: var(--cream);
-            color: var(--text-primary);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        ::selection {
-            background: var(--sage-light);
-            color: var(--forest);
-        }
-
-        /* Scroll Progress */
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--sage), var(--terracotta));
-            z-index: 1001;
-            transform-origin: left;
-            transform: scaleX(0);
-        }
-
-        /* Organic Background Shapes */
-        .organic-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .blob-1 {
-            width: 600px;
-            height: 600px;
-            background: var(--sage-light);
-            top: -200px;
-            right: -200px;
-            animation-delay: 0s;
-        }
-
-        .blob-2 {
-            width: 500px;
-            height: 500px;
-            background: var(--terracotta-light);
-            bottom: -150px;
-            left: -150px;
-            animation-delay: -7s;
-        }
-
-        .blob-3 {
-            width: 400px;
-            height: 400px;
-            background: var(--sage);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: -14s;
-            opacity: 0.2;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            33% {
-                transform: translate(30px, -30px) scale(1.05);
-            }
-
-            66% {
-                transform: translate(-20px, 20px) scale(0.95);
-            }
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 20px 0;
-            transition: var(--transition);
-        }
-
-        header.scrolled {
-            background: rgba(250, 248, 245, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-            padding: 15px 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--forest);
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--sage);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: var(--sage-dark);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--text-primary);
-            padding: 10px;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 0 80px;
-            position: relative;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .hero-text {
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-badge {
-            display: inline-block;
-            padding: 8px 20px;
-            background: var(--sage-light);
-            color: var(--forest);
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-        }
-
-        .hero h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(48px, 6vw, 72px);
-            font-weight: 600;
-            color: var(--forest);
-            line-height: 1.1;
-            margin-bottom: 16px;
-        }
-
-        .hero .subtitle {
-            font-family: var(--font-serif);
-            font-size: clamp(24px, 3vw, 32px);
-            color: var(--terracotta);
-            font-weight: 500;
-            font-style: italic;
-            margin-bottom: 32px;
-        }
-
-        .hero-description {
-            font-size: 16px;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 40px;
-            max-width: 500px;
-        }
-
-        .hero-image {
-            position: relative;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .hero-image-wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 450px;
-            margin: 0 auto;
-        }
-
-        .hero-image-wrapper::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            right: -20px;
-            bottom: -20px;
-            background: var(--sage-light);
-            border-radius: 30px;
-            z-index: -1;
-        }
-
-        .profile-img {
-            width: 100%;
-            aspect-ratio: 4/5;
-            object-fit: cover;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 40px;
-            margin-top: 50px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: var(--font-serif);
-            font-size: 36px;
-            font-weight: 600;
-            color: var(--forest);
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Buttons */
-        .btn-group {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 16px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-primary {
-            background: var(--forest);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: var(--sage-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(61, 74, 58, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--forest);
-            border: 2px solid var(--forest);
-        }
-
-        .btn-secondary:hover {
-            background: var(--forest);
-            color: var(--white);
-        }
-
-        /* Section Styling */
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-label {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--sage-dark);
-            margin-bottom: 16px;
-        }
-
-        .section-title {
-            font-family: var(--font-serif);
-            font-size: clamp(36px, 4vw, 48px);
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 16px;
-        }
-
-        .section-subtitle {
-            font-size: 16px;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* About Section */
-        .about-section {
-            background: var(--white);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-text p {
-            font-size: 16px;
-            color: var(--text-secondary);
-            line-height: 1.9;
-            margin-bottom: 24px;
-        }
-
-        .about-features {
-            display: grid;
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .about-feature {
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-        }
-
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--sage-light);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            flex-shrink: 0;
-        }
-
-        .feature-text h4 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 4px;
-        }
-
-        .feature-text p {
-            font-size: 14px;
-            color: var(--text-light);
-            margin: 0;
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .skill-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
-        }
-
-        .skill-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 24px;
-            background: linear-gradient(135deg, var(--sage-light), var(--sage));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-        }
-
-        .skill-card h3 {
-            font-family: var(--font-serif);
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 12px;
-        }
-
-        .skill-card p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Experience Timeline */
-        .experience-section {
-            background: var(--white);
-        }
-
-        .timeline {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--sage), var(--terracotta));
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 50px;
-            padding-bottom: 50px;
-        }
-
-        .timeline-item:last-child {
-            padding-bottom: 0;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: -8px;
-            top: 0;
-            width: 18px;
-            height: 18px;
-            background: var(--cream);
-            border: 3px solid var(--sage);
-            border-radius: 50%;
-        }
-
-        .timeline-content {
-            background: var(--cream);
-            padding: 30px;
-            border-radius: 16px;
-            transition: var(--transition);
-        }
-
-        .timeline-content:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-        }
-
-        .timeline-date {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--terracotta);
-            margin-bottom: 8px;
-        }
-
-        .timeline-content h3 {
-            font-family: var(--font-serif);
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 4px;
-        }
-
-        .timeline-company {
-            font-size: 15px;
-            color: var(--sage-dark);
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-
-        .timeline-content p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-
-        .project-card {
-            background: var(--white);
-            border-radius: 24px;
-            overflow: hidden;
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-header {
-            padding: 40px 40px 30px;
-            background: linear-gradient(135deg, var(--sage-light) 0%, var(--cream) 100%);
-        }
-
-        .project-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .project-header h3 {
-            font-family: var(--font-serif);
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 8px;
-        }
-
-        .project-subtitle {
-            font-size: 14px;
-            color: var(--sage-dark);
-            font-weight: 500;
-        }
-
-        .project-body {
-            padding: 30px 40px 40px;
-        }
-
-        .project-body p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 24px;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .project-tag {
-            padding: 6px 14px;
-            background: var(--cream);
-            color: var(--text-secondary);
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        /* Location Section */
-        .location-section {
-            background: var(--white);
-        }
-
-        .location-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-
-        .location-card {
-            background: var(--cream);
-            padding: 50px 40px;
-            border-radius: 24px;
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .location-card:hover {
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
-        }
-
-        .location-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 24px;
-            background: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .location-card h3 {
-            font-family: var(--font-serif);
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 12px;
-        }
-
-        .location-card p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
-
-        .location-link {
-            color: var(--sage-dark);
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 14px;
-            transition: var(--transition);
-        }
-
-        .location-link:hover {
-            color: var(--terracotta);
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: var(--forest);
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: var(--sage-dark);
-            border-radius: 50%;
-            opacity: 0.3;
-        }
-
-        .contact-section .section-label {
-            color: var(--sage-light);
-        }
-
-        .contact-section .section-title {
-            color: var(--white);
-        }
-
-        .contact-section .section-subtitle {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .contact-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-        }
-
-        .contact-card h3 {
-            font-family: var(--font-serif);
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .contact-card a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 14px;
-            transition: var(--transition);
-        }
-
-        .contact-card a:hover {
-            color: var(--white);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--charcoal);
-            color: rgba(255, 255, 255, 0.6);
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 14px;
-            margin: 8px 0;
-        }
-
-        footer strong {
-            color: var(--white);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 60px;
-                text-align: center;
-            }
-
-            .hero-description {
-                margin: 0 auto 40px;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .hero-image-wrapper {
-                max-width: 350px;
-            }
-
-            .hero-stats {
-                justify-content: center;
-            }
-
-            .btn-group {
-                justify-content: center;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 24px;
-                right: 24px;
-                background: var(--white);
-                flex-direction: column;
-                padding: 30px;
-                border-radius: 16px;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-                gap: 20px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero {
-                padding: 100px 0 60px;
-            }
-
-            .hero-stats {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .location-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section {
-                padding: 70px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .btn-group {
-                flex-direction: column;
-            }
-
-            .project-header,
-            .project-body {
-                padding: 30px 24px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Scroll Progress -->
-    <div class="scroll-progress" aria-hidden="true"></div>
-
-    <!-- Organic Background -->
-    <div class="organic-bg" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
+    <!-- Ambient glow -->
+    <div class="ambient" aria-hidden="true"></div>
 
     <!-- Header -->
     <header id="header" role="banner">
         <div class="container">
             <nav role="navigation" aria-label="Menu principale">
-                <a href="#home" class="logo" aria-label="Manuela Durizzi - Psicologa - Torna alla home">Manuela
-                    Durizzi</a>
+                <a href="#home" class="logo" aria-label="Manuela Durizzi - Psicologa - Torna alla home">Manuela Durizzi</a>
                 <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Apri menu di navigazione"
                     aria-expanded="false" aria-controls="navLinks">☰</button>
                 <ul class="nav-links" id="navLinks" role="menubar">
@@ -1427,95 +455,81 @@
         <!-- Hero Section -->
         <section class="hero" id="home" aria-labelledby="hero-title">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <span class="hero-badge" aria-label="Iscrizione professionale">Ordine Psicologi Lombardia n.
-                            30473</span>
-                        <h1 id="hero-title">Manuela Durizzi</h1>
-                        <p class="subtitle" role="doc-subtitle">Psicologa Clinica a Chiari</p>
-                        <p class="hero-description">
-                            Accompagno le persone verso il benessere emotivo creando uno spazio sicuro dove esplorare sé
-                            stessi. Offro percorsi online e in presenza rivolti al singolo, alla coppia e alla famiglia,
-                            includendo supporto alla genitorialità e tutoring per DSA. <br> <br>
+                <div class="hero-inner">
+                    <span class="eyebrow" aria-label="Iscrizione professionale">Ordine Psicologi Lombardia n. 30473</span>
 
-                            Intervengo principalmente su gestione delle emozioni, disturbi dell'umore e dipendenze,
-                            guidando il paziente attraverso l'ansia, lo stress e le fasi di transizione della vita.
-                        </p>
-                        <div class="btn-group">
-                            <a href="mailto:manueladurizzi@gmail.com" class="btn btn-primary"
-                                aria-label="Invia email per prenotare un colloquio psicologico">
-                                <span>Prenota un Colloquio</span>
-                            </a>
-                            <a href="tel:+393520019266" class="btn btn-secondary"
-                                aria-label="Chiama il numero +39 3520019266">
-                                <span>📞 +39 3520019266</span>
-                            </a>
-                        </div>
-                        <div class="hero-stats" aria-label="Statistiche professionali">
-                            <div class="stat-item">
-                                <span class="stat-number">30473</span>
-                                <span class="stat-label">Albo Lombardia</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">2</span>
-                                <span class="stat-label">Sedi</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">∞</span>
-                                <span class="stat-label">Dedizione</span>
-                            </div>
-                        </div>
+                    <div class="breath" role="img" aria-label="Guida al respiro: inspira quattro secondi, trattieni, espira lentamente">
+                        <span class="breath-glow" aria-hidden="true"></span>
+                        <span class="breath-ring" aria-hidden="true"></span>
+                        <span class="breath-phase" aria-hidden="true">
+                            <span class="ph ph-in">Inspira</span>
+                            <span class="ph ph-hold">Trattieni</span>
+                            <span class="ph ph-out">Espira</span>
+                            <span class="ph ph-static">Respira</span>
+                        </span>
                     </div>
-                    <div class="hero-image">
-                        <div class="hero-image-wrapper">
-                            <img src="photo.jpeg"
-                                alt="Dott.ssa Manuela Durizzi - Psicologa Clinica a Chiari - Foto professionale"
-                                class="profile-img" width="400" height="400" loading="eager">
-                        </div>
+
+                    <h1 id="hero-title">Uno spazio dove <em>rallentare</em></h1>
+                    <p class="hero-role" role="doc-subtitle">Manuela Durizzi — Psicologa Clinica a Chiari</p>
+                    <p class="hero-description">
+                        Accompagno le persone verso il benessere emotivo, creando uno spazio sicuro e privo di
+                        giudizio dove esplorare sé stessi. Percorsi per ansia, stress, crescita personale e
+                        supporto all'apprendimento — online e in studio.
+                    </p>
+                    <div class="btn-group">
+                        <a href="mailto:manueladurizzi@gmail.com" class="btn btn-primary"
+                            aria-label="Invia email per prenotare un colloquio psicologico">Prenota un colloquio</a>
+                        <a href="tel:+393520019266" class="btn btn-secondary"
+                            aria-label="Chiama il numero +39 352 001 9266">📞 +39 352 001 9266</a>
                     </div>
+                    <p class="hero-note"><span>Online</span> in tutta Italia &nbsp;·&nbsp; <span>In presenza</span> a Chiari (BS)</p>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section class="section about-section" id="about" aria-labelledby="about-title">
+        <section class="section section-alt" id="about" aria-labelledby="about-title">
             <div class="container">
                 <article class="about-content" itemscope itemtype="https://schema.org/Person">
+                    <div class="about-portrait">
+                        <img src="photo.jpeg"
+                            alt="Dott.ssa Manuela Durizzi - Psicologa Clinica a Chiari - Foto professionale"
+                            width="400" height="500" loading="lazy">
+                    </div>
                     <div class="about-text">
                         <span class="section-label">Chi Sono</span>
-                        <h2 class="section-title" id="about-title">Un percorso dedicato alla cura della persona</h2>
+                        <h2 id="about-title">Un percorso dedicato alla cura della persona</h2>
                         <p>
-                            Sono una Psicologa Clinica e Tutor dell’Apprendimento. Il mio lavoro nasce da una passione
-                            autentica per le persone e dalla convinzione che ognuno di noi, se supportato nel modo
-                            giusto, possieda il potenziale per superare i momenti di crisi e costruire il proprio
-                            benessere.
+                            Sono una Psicologa Clinica e Tutor dell'Apprendimento. Il mio lavoro nasce da una passione
+                            autentica per le persone e dalla convinzione che ognuno, se supportato nel modo giusto,
+                            possieda il potenziale per superare i momenti di crisi e costruire il proprio benessere.
                         </p>
                         <p>
-                            Nel mio studio offro uno spazio di ascolto sicuro, privo di giudizio ed empatico, dove poter
-                            affrontare insieme le sfide della crescita, le difficoltà scolastiche o i momenti di disagio
-                            emotivo.
+                            Nel mio studio offro uno spazio di ascolto sicuro, empatico e privo di giudizio, dove
+                            affrontare insieme le sfide della crescita, le difficoltà scolastiche o i momenti di
+                            disagio emotivo.
                         </p>
-                    </div>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <div class="feature-icon" aria-hidden="true">🎓</div>
-                            <div class="feature-text">
-                                <h4>Laurea Magistrale</h4>
-                                <p>Psicologia Clinica - Università di Bergamo</p>
+                        <div class="about-features">
+                            <div class="about-feature">
+                                <div class="feature-icon" aria-hidden="true">🎓</div>
+                                <div class="feature-text">
+                                    <h4>Laurea Magistrale</h4>
+                                    <p>Psicologia Clinica — Università di Bergamo</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="about-feature">
-                            <div class="feature-icon" aria-hidden="true">📜</div>
-                            <div class="feature-text">
-                                <h4>Tutor dell'Apprendimento</h4>
-                                <p>Certificazione specialistica</p>
+                            <div class="about-feature">
+                                <div class="feature-icon" aria-hidden="true">📜</div>
+                                <div class="feature-text">
+                                    <h4>Tutor dell'Apprendimento</h4>
+                                    <p>Certificazione specialistica</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="about-feature">
-                            <div class="feature-icon" aria-hidden="true">🌿</div>
-                            <div class="feature-text">
-                                <h4>Formazione Continua</h4>
-                                <p>Scuola di Psicoterapia Integrata Relazionale</p>
+                            <div class="about-feature">
+                                <div class="feature-icon" aria-hidden="true">🌿</div>
+                                <div class="feature-text">
+                                    <h4>Formazione Continua</h4>
+                                    <p>Scuola di Psicoterapia Integrata Relazionale</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1527,101 +541,102 @@
         <section class="section" id="skills" aria-labelledby="skills-title">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-label">Competenze</span>
+                    <span class="section-label">Come posso aiutarti</span>
                     <h2 class="section-title" id="skills-title">Le mie aree di specializzazione</h2>
                     <p class="section-subtitle">
-                        Abilità sviluppate attraverso formazione accademica ed esperienza diretta sul campo come
-                        <strong>psicologa a Chiari</strong>
+                        Competenze sviluppate tra formazione accademica ed esperienza diretta come
+                        <strong>psicologa a Chiari</strong>.
                     </p>
                 </div>
                 <div class="skills-grid" role="list">
                     <article class="skill-card" role="listitem">
                         <div class="skill-icon" aria-hidden="true">🧠</div>
                         <h3>Psicologia Clinica</h3>
-                        <p>Competenze in assessment, supporto psicologico e interventi evidence-based per il benessere
-                            mentale</p>
+                        <p>Assessment, supporto psicologico e interventi evidence-based per il benessere mentale.</p>
                     </article>
                     <article class="skill-card" role="listitem">
                         <div class="skill-icon" aria-hidden="true">💬</div>
-                        <h3>Gestione Ansia e Stress</h3>
-                        <p>Tecniche e strumenti per gestire ansia, attacchi di panico e stress nella vita quotidiana</p>
+                        <h3>Ansia e Stress</h3>
+                        <p>Strumenti e tecniche per gestire ansia, attacchi di panico e stress nella vita quotidiana.</p>
                     </article>
                     <article class="skill-card" role="listitem">
                         <div class="skill-icon" aria-hidden="true">👥</div>
-                        <h3>Gestione Relazionale</h3>
-                        <p>Esperienza nella facilitazione di dinamiche interpersonali e costruzione di relazioni
-                            significative</p>
+                        <h3>Relazioni</h3>
+                        <p>Facilitazione delle dinamiche interpersonali e costruzione di relazioni significative.</p>
                     </article>
                     <article class="skill-card" role="listitem">
                         <div class="skill-icon" aria-hidden="true">📚</div>
                         <h3>Supporto all'Apprendimento</h3>
-                        <p>Metodologie personalizzate per accompagnare percorsi di crescita e sviluppo individuale</p>
+                        <p>Metodologie personalizzate per accompagnare percorsi di crescita e studio, anche DSA.</p>
                     </article>
                     <article class="skill-card" role="listitem">
                         <div class="skill-icon" aria-hidden="true">❤️</div>
                         <h3>Intelligenza Emotiva</h3>
-                        <p>Riconoscimento e gestione delle emozioni per promuovere il benessere psicologico</p>
+                        <p>Riconoscere e gestire le emozioni per promuovere un equilibrio psicologico duraturo.</p>
                     </article>
                     <article class="skill-card" role="listitem">
                         <div class="skill-icon" aria-hidden="true">🌱</div>
                         <h3>Crescita Personale</h3>
-                        <p>Accompagnamento verso la scoperta delle proprie risorse e potenzialità interiori</p>
+                        <p>Accompagnamento alla scoperta delle proprie risorse e potenzialità interiori.</p>
+                    </article>
+                    <article class="skill-card" role="listitem">
+                        <div class="skill-icon" aria-hidden="true">🧒</div>
+                        <h3>Autismo ed Età Evolutiva</h3>
+                        <p>Interventi con bambini con autismo in équipe multidisciplinare: comunicazione, autonomie e inserimento sociale.</p>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+        <section class="section section-alt" id="experience" aria-labelledby="experience-title">
             <div class="container">
                 <div class="section-header">
                     <span class="section-label">Percorso</span>
-                    <h2 class="section-title" id="experience-title">Esperienze professionali</h2>
-                    <p class="section-subtitle">
-                        Un cammino di crescita continua tra formazione e pratica sul campo
-                    </p>
+                    <h2 class="section-title" id="experience-title">Formazione ed esperienza</h2>
+                    <p class="section-subtitle">Un cammino di crescita continua tra studio e pratica sul campo.</p>
                 </div>
                 <div class="timeline" role="list" aria-label="Timeline delle esperienze professionali">
+                    <span class="timeline-fill" aria-hidden="true"></span>
                     <article class="timeline-item" role="listitem">
                         <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">In corso</span>
-                            <h3>Scuola di Psicoterapia</h3>
-                            <p class="timeline-company">Psicoterapia Integrata Relazionale, Bergamo</p>
-                            <p>Formazione specialistica con approccio integrato relazionale per approfondire le
-                                competenze
-                                cliniche e terapeutiche.</p>
-                        </div>
+                        <span class="timeline-date">Attuale</span>
+                        <h3>Psicologa — Fondazione Angelo Custode Onlus</h3>
+                        <p class="timeline-company">Predore (BG) · Équipe multidisciplinare</p>
+                        <p>Terapie e trattamenti con bambini con autismo a basso funzionamento, con interventi mirati
+                            su comunicazione, autonomie personali e inserimento sociale.</p>
                     </article>
                     <article class="timeline-item" role="listitem">
                         <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Attuale</span>
-                            <h3>Educatrice</h3>
-                            <p class="timeline-company">L'Impronta - Cooperativa Sociale</p>
-                            <p>Sviluppo di competenze trasversali: ascolto attivo, gestione di gruppi, creazione di
-                                relazioni significative e supporto al potenziale individuale.</p>
-                        </div>
+                        <span class="timeline-date">In corso</span>
+                        <h3>Scuola di Psicoterapia</h3>
+                        <p class="timeline-company">Psicoterapia Integrata Relazionale, Bergamo</p>
+                        <p>Formazione specialistica con approccio integrato relazionale, per approfondire competenze
+                            cliniche e terapeutiche.</p>
                     </article>
                     <article class="timeline-item" role="listitem">
                         <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2023 - 2026</span>
-                            <h3>Laurea Magistrale in Psicologia Clinica</h3>
-                            <p class="timeline-company">Università degli Studi di Bergamo</p>
-                            <p>Percorso formativo specialistico con focus su assessment psicologico, psicopatologia e
-                                metodologie evidence-based.</p>
-                        </div>
+                        <span class="timeline-date">Attuale</span>
+                        <h3>Educatrice</h3>
+                        <p class="timeline-company">L'Impronta — Cooperativa Sociale</p>
+                        <p>Ascolto attivo, gestione di gruppi, creazione di relazioni significative e supporto al
+                            potenziale individuale.</p>
                     </article>
                     <article class="timeline-item" role="listitem">
                         <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Conseguita</span>
-                            <h3>Certificazione Tutor dell'Apprendimento</h3>
-                            <p class="timeline-company">Formazione Specialistica</p>
-                            <p>Qualifica per supportare studenti con difficoltà di apprendimento attraverso metodologie
-                                personalizzate e strumenti compensativi.</p>
-                        </div>
+                        <span class="timeline-date">2023 — 2026</span>
+                        <h3>Laurea Magistrale in Psicologia Clinica</h3>
+                        <p class="timeline-company">Università degli Studi di Bergamo</p>
+                        <p>Percorso specialistico con focus su assessment psicologico, psicopatologia e metodologie
+                            evidence-based.</p>
+                    </article>
+                    <article class="timeline-item" role="listitem">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <span class="timeline-date">Conseguita</span>
+                        <h3>Certificazione Tutor dell'Apprendimento</h3>
+                        <p class="timeline-company">Formazione Specialistica</p>
+                        <p>Qualifica per supportare studenti con difficoltà di apprendimento tramite metodologie
+                            personalizzate e strumenti compensativi.</p>
                     </article>
                 </div>
             </div>
@@ -1632,24 +647,21 @@
             <div class="container">
                 <div class="section-header">
                     <span class="section-label">Progetti</span>
-                    <h2 class="section-title" id="projects-title">Iniziative & Innovazione</h2>
-                    <p class="section-subtitle">
-                        Applicazioni pratiche della psicologia in contesti diversi
-                    </p>
+                    <h2 class="section-title" id="projects-title">Iniziative &amp; innovazione</h2>
+                    <p class="section-subtitle">Applicazioni pratiche della psicologia in contesti diversi.</p>
                 </div>
                 <div class="projects-grid">
                     <article class="project-card">
                         <div class="project-header">
                             <div class="project-icon" aria-hidden="true">🤖💙</div>
                             <h3>AI Feel</h3>
-                            <p class="project-subtitle">Chat AI con Riconoscimento Empatico</p>
+                            <p class="project-subtitle">Chat AI con riconoscimento empatico</p>
                         </div>
                         <div class="project-body">
                             <p>
-                                Applicazione mobile innovativa che integra intelligenza artificiale e psicologia per il
-                                riconoscimento e la validazione empatica delle emozioni. Il sistema utilizza NLP
-                                avanzato
-                                per comprendere lo stato emotivo attraverso la conversazione.
+                                Applicazione mobile che integra intelligenza artificiale e psicologia per il
+                                riconoscimento e la validazione empatica delle emozioni, con NLP avanzato per
+                                comprendere lo stato emotivo attraverso la conversazione.
                             </p>
                             <div class="project-tags">
                                 <span class="project-tag">AI</span>
@@ -1664,13 +676,13 @@
                         <div class="project-header">
                             <div class="project-icon" aria-hidden="true">👨‍👩‍👧‍👦💜</div>
                             <h3>Servizio SIMIFA</h3>
-                            <p class="project-subtitle">Tutela Minori e Supporto Familiare</p>
+                            <p class="project-subtitle">Tutela minori e supporto familiare</p>
                         </div>
                         <div class="project-body">
                             <p>
-                                Servizio educativo specializzato in collaborazione con la Tutela Minori di Seriate.
-                                Interventi mirati al supporto di famiglie e minori in situazioni di fragilità,
-                                con focus sulla protezione e l'accompagnamento.
+                                Servizio educativo in collaborazione con la Tutela Minori di Seriate. Interventi
+                                mirati al supporto di famiglie e minori in situazioni di fragilità, con focus sulla
+                                protezione e l'accompagnamento.
                             </p>
                             <div class="project-tags">
                                 <span class="project-tag">Tutela Minori</span>
@@ -1685,43 +697,38 @@
         </section>
 
         <!-- Location Section -->
-        <section class="section location-section" id="location" aria-labelledby="location-title" itemscope
+        <section class="section section-alt" id="location" aria-labelledby="location-title" itemscope
             itemtype="https://schema.org/LocalBusiness">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-label">Dove Ricevo</span>
-                    <h2 class="section-title" id="location-title">I miei studi - Psicologa Chiari e Online</h2>
+                    <span class="section-label">Dove ricevo</span>
+                    <h2 class="section-title" id="location-title">In studio a Chiari e online</h2>
                     <p class="section-subtitle">
-                        Disponibile per <strong>consulenze psicologiche online</strong> e in presenza a Chiari (BS),
-                        facilmente raggiungibile da Chiari
+                        Disponibile per <strong>consulenze psicologiche online</strong> e in presenza a Chiari (BS).
                     </p>
                 </div>
                 <div class="location-grid">
                     <article class="location-card">
                         <div class="location-icon" aria-hidden="true">💻</div>
-                        <h3>Consulenze Psicologiche Online</h3>
+                        <h3>Consulenze online</h3>
                         <p>
-                            Colloqui psicologici comodamente da casa tua, tramite videochiamata
-                            su piattaforme sicure e certificate per garantire privacy e riservatezza.
-                            <strong>Disponibile in tutta Italia.</strong>
+                            Colloqui comodamente da casa, in videochiamata su piattaforme sicure e certificate per
+                            garantire privacy e riservatezza. <strong>Disponibile in tutta Italia.</strong>
                         </p>
                         <a href="mailto:manueladurizzi@gmail.com" class="location-link"
-                            aria-label="Prenota una consulenza psicologica online">Prenota Online →</a>
+                            aria-label="Prenota una consulenza psicologica online">Prenota online →</a>
                     </article>
                     <article class="location-card" itemprop="location" itemscope itemtype="https://schema.org/Place">
                         <div class="location-icon" aria-hidden="true">🏥</div>
-                        <h3>Studio Elumedica - Chiari</h3>
+                        <h3>Studio Elumedica — Chiari</h3>
                         <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                             <span itemprop="streetAddress">Via Maffoni 19</span>, <span
                                 itemprop="addressLocality">Chiari</span> (<span itemprop="addressRegion">BS</span>)<br>
                             Appuntamenti in presenza in un ambiente professionale, riservato e accogliente.
-                            <strong>A Chiari.</strong>
                         </p>
                         <a href="https://maps.google.com/?q=Via+Maffoni+19+Chiari" target="_blank"
                             rel="noopener noreferrer" class="location-link"
-                            aria-label="Apri Google Maps per indicazioni stradali verso lo studio">
-                            Indicazioni Stradali →
-                        </a>
+                            aria-label="Apri Google Maps per indicazioni stradali verso lo studio">Indicazioni stradali →</a>
                     </article>
                 </div>
             </div>
@@ -1732,10 +739,10 @@
             <div class="container">
                 <div class="section-header">
                     <span class="section-label">Contatti</span>
-                    <h2 class="section-title" id="contact-title">Inizia il tuo percorso - Contatta la Psicologa</h2>
+                    <h2 class="section-title" id="contact-title">Inizia il tuo percorso</h2>
                     <p class="section-subtitle">
-                        Il primo passo verso il benessere è decidere di prenderti cura di te. <strong>Prenota una
-                            consulenza psicologica</strong> oggi.
+                        Il primo passo verso il benessere è decidere di prenderti cura di te.
+                        <strong>Prenota una consulenza</strong> oggi.
                     </p>
                 </div>
                 <div class="contact-grid" itemscope itemtype="https://schema.org/Person">
@@ -1748,23 +755,20 @@
                     <article class="contact-card">
                         <div class="contact-icon" aria-hidden="true">📱</div>
                         <h3>Telefono</h3>
-                        <a href="tel:+393520019266" itemprop="telephone" aria-label="Chiama +39 3520019266">+39 334 214
-                            478</a>
+                        <a href="tel:+393520019266" itemprop="telephone" aria-label="Chiama +39 352 001 9266">+39 352 001 9266</a>
                     </article>
                     <article class="contact-card">
                         <div class="contact-icon" aria-hidden="true">💼</div>
                         <h3>LinkedIn</h3>
                         <a href="https://www.linkedin.com/in/manuela-durizzi-485a28371/" target="_blank"
                             rel="noopener noreferrer" itemprop="sameAs"
-                            aria-label="Visita il profilo LinkedIn di Manuela Durizzi">Profilo
-                            LinkedIn</a>
+                            aria-label="Visita il profilo LinkedIn di Manuela Durizzi">Profilo LinkedIn</a>
                     </article>
                     <article class="contact-card">
                         <div class="contact-icon" aria-hidden="true">🩺</div>
-                        <h3>MioDottore</h3>
-                        <a href="https://www.miodottore.it/manuela-durizzi/psicologo-clinico/chiari" target="_blank"
-                            rel="noopener noreferrer" itemprop="sameAs" aria-label="Prenota su MioDottore">Prenota
-                            Appuntamento</a>
+                        <h3>GuidaPsicologi</h3>
+                        <a href="https://www.guidapsicologi.it/studio/manuela-durizzi" target="_blank"
+                            rel="noopener noreferrer" itemprop="sameAs" aria-label="Profilo su GuidaPsicologi">Prenota appuntamento</a>
                     </article>
                 </div>
             </div>
@@ -1777,77 +781,11 @@
         <div class="container">
             <p><strong>© 2026 Dott.ssa Manuela Durizzi</strong> • Psicologa Clinica Chiari</p>
             <p>Chiari, Lombardia • Ordine Psicologi Lombardia n. <span itemprop="identifier">30473</span></p>
-            <p style="margin-top: 15px; opacity: 0.6;">Progettato con cura per connessioni autentiche</p>
+            <p style="margin-top: 14px; opacity: 0.6;">Uno spazio sicuro per connessioni autentiche</p>
         </div>
     </footer>
 
-    <script>
-        // Scroll Progress Bar
-        window.addEventListener('scroll', () => {
-            const scrollProgress = document.querySelector('.scroll-progress');
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = (window.scrollY / scrollHeight);
-            scrollProgress.style.transform = `scaleX(${scrolled})`;
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Smooth Scrolling & close menu
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    document.getElementById('navLinks').classList.remove('active');
-                }
-            });
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-visible');
-                }
-            });
-        }, observerOptions);
-
-        // Add animation classes
-        document.querySelectorAll('.skill-card, .timeline-item, .project-card, .location-card, .contact-card').forEach((el, index) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-            observer.observe(el);
-        });
-
-        // Trigger animation when visible
-        const style = document.createElement('style');
-        style.textContent = `.fade-in-visible { opacity: 1 !important; transform: translateY(0) !important; }`;
-        document.head.appendChild(style);
-    </script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
