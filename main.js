@@ -105,3 +105,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+// Conversioni Google Ads: clic su telefono ed email
+var ADS_CONVERSIONS = {
+    'tel:': 'AW-17883799301/MW0UCLCN3asdEIW-1M9C',
+    'mailto:': 'AW-17883799301/qgQtCLON3asdEIW-1M9C'
+};
+document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!a || typeof gtag !== 'function') return;
+    var scheme = a.getAttribute('href').indexOf('tel:') === 0 ? 'tel:' : 'mailto:';
+    gtag('event', 'conversion', { send_to: ADS_CONVERSIONS[scheme] });
+});
