@@ -1085,6 +1085,34 @@ button:focus-visible,
     .content-section { padding: 64px 0; }
 }
 
+/* Barra contatti fissa (solo mobile, iniettata da main.js) */
+.mobile-cta { display: none; }
+
+@media (max-width: 768px) {
+    .mobile-cta {
+        display: flex;
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+        z-index: 999;
+        gap: 10px;
+    }
+    .mobile-cta a {
+        flex: 1;
+        text-align: center;
+        padding: 14px 10px;
+        border-radius: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        background: var(--iris-deep);
+        color: var(--white);
+        box-shadow: 0 10px 28px rgba(30, 33, 56, 0.22);
+    }
+    .mobile-cta a.wa { background: #1F8F55; }
+    body { padding-bottom: 84px; }
+}
+
 @media (max-width: 480px) {
     .btn { width: 100%; justify-content: center; }
     .btn-group { flex-direction: column; }

@@ -106,14 +106,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Conversioni Google Ads: clic su telefono ed email
+// Conversioni Google Ads: clic su telefono, email e WhatsApp
 var ADS_CONVERSIONS = {
-    'tel:': 'AW-17883799301/MW0UCLCN3asdEIW-1M9C',
-    'mailto:': 'AW-17883799301/qgQtCLON3asdEIW-1M9C'
+    tel: 'AW-17883799301/MW0UCLCN3asdEIW-1M9C',
+    mailto: 'AW-17883799301/qgQtCLON3asdEIW-1M9C',
+    wa: 'AW-17883799301/owaLCJqd46sdEIW-1M9C'
 };
 document.addEventListener('click', function (e) {
-    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"], a[href^="https://wa.me/"]');
     if (!a || typeof gtag !== 'function') return;
-    var scheme = a.getAttribute('href').indexOf('tel:') === 0 ? 'tel:' : 'mailto:';
-    gtag('event', 'conversion', { send_to: ADS_CONVERSIONS[scheme] });
+    var href = a.getAttribute('href');
+    var kind = href.indexOf('tel:') === 0 ? 'tel' : href.indexOf('mailto:') === 0 ? 'mailto' : 'wa';
+    gtag('event', 'conversion', { send_to: ADS_CONVERSIONS[kind] });
+});
+
+// Barra contatti fissa su mobile (visibile solo sotto i 768px, vedi styles.css)
+document.addEventListener('DOMContentLoaded', function () {
+    var bar = document.createElement('div');
+    bar.className = 'mobile-cta';
+    bar.innerHTML = '<a href="tel:+393520019266">📞 Chiama</a>' +
+        '<a class="wa" href="https://wa.me/393520019266" target="_blank" rel="noopener">💬 WhatsApp</a>';
+    document.body.appendChild(bar);
 });
